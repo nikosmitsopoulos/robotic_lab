@@ -14,12 +14,16 @@ The project is organized into three parts (A, B, C), following a bottom-up appro
 - `cross_demo` – 3D cross product visualization
 - `plot_Rot(R)`, `generate_rot()` – Local frames in 3D
 
-### PART B – Homogeneous Transformations
+###  PART B – Homogeneous Transformations & Applications
 
-- `gr(R)`, `gp(p)` – Convert rotation & translation to 4×4 `G` matrix
-- `gRX/gRY/gRZ(theta)` – Elementary rotation matrices
-- `plot_hom(G)` – 3D axis visualization of a frame
-- `rotAndTrans_shape()` – Transform a geometric shape (cylinder)
+- `gRX(th)`, `gRY(th)`, `gRZ(th)` – Return rotation matrix for angle `th` (in degrees) around X, Y, Z axis respectively
+- `gr(R)`, `gp(p)` – Create homogeneous transformation matrices from rotation `R` or translation vector `p`
+- `homogen(R, p)` – Construct full homogeneous transformation matrix from rotation and translation
+- `rotAndTranVec(G, vin)` – Apply homogeneous transformation `G` to a 3D input vector `vin`
+- `plot_hom(G)` – Visualize the local coordinate frame using colored 3D arrows
+- `rotX(th)`, `rotY(th)`, `rotZ(th)` – Return rotation matrix for angle `th` (in degrees) around X, Y, Z axis respectively
+- `rotAndTrans_shape()` – Apply full transformation to 3D geometry (e.g., a cylinder)
+
 
 ### PART C – PRR Robot and Kinematics
 
